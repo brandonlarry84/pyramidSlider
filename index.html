@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pyramid Slide</title>
+    <style>
+        #pyramid {
+            line-height: 0;
+            font-size: 30px;
+        }
+
+        body {
+            font-family: "Courier New", monospace;
+            text-align: center;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .controls label, .controls select, .controls input {
+            margin: 0 10px;
+            font-size: 18px;
+        }
+
+        .slider-input {
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pyramid Slide</h1>
+    
+    <div class="controls">
+        <label for="brickSymbol">Brick Symbol:</label>
+        <select id="brickSymbol">
+            <option value="#">#</option>
+            <option value="@">@</option>
+            <option value="X">X</option>
+            <option value="$">$</option>
+        </select>
+
+        <label for="heightRange">How high?</label>
+        <input type="range" id="heightRange" min="1" max="10" value="1" class="slider-input">
+        <span id="heightValue">1</span>
+    </div>
+
+    <div id="pyramid"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
